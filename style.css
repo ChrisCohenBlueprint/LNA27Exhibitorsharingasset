@@ -233,12 +233,12 @@ canvas {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.15rem;
-    color: #ffffff !important;
+    color: #162842 !important;
     line-height: 1.2;
 }
 
 .placeholder p {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(22, 40, 66, 0.7) !important;
     font-size: 0.8rem;
 }
 
