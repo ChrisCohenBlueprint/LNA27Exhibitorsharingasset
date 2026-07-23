@@ -86,8 +86,8 @@
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        // 1. Draw Clean Canvas Dark Underlay Base
-        ctx.fillStyle = "#0a0c10"; 
+        // 1. Draw Clean Canvas White Underlay Base
+        ctx.fillStyle = "#ffffff"; 
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // 2. Render User Image Logo (free floating underlay)
@@ -100,6 +100,10 @@
             const imgCenterX = (currentStyle === 'banner' ? 675 : 850) + userImgX;
             const imgCenterY = (currentStyle === 'banner' ? 107 : 171) + userImgY;
             
+            // White background layer directly behind the uploaded image
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(imgCenterX - dw / 2, imgCenterY - dh / 2, dw, dh);
+
             ctx.drawImage(userImage, imgCenterX - dw / 2, imgCenterY - dh / 2, dw, dh);
             ctx.restore();
         }
