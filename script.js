@@ -117,7 +117,7 @@
         }
 
         // 4. Render Stand Number Text
-        const boothText = boothInput.value.trim() ? boothInput.value : "208";
+        const boothText = boothInput.value.trim() ? boothInput.value : "";
         if (boothText) {
             const fontSize = currentStyle === 'banner' ? "22px" : "34px";
             const fontName = "'NeueHaasGrotesk', 'Inter', sans-serif";
