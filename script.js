@@ -31,6 +31,9 @@
     frameImage.crossOrigin = "anonymous";
     frameImage.src = FRAME_PATH_CURRENT;
     frameImage.onload = () => render();
+    if (document.fonts) {
+        document.fonts.ready.then(() => render());
+    }
 
     boothInput.oninput = () => render();
 
@@ -114,7 +117,7 @@
         }
 
         // 4. Render Stand Number Text
-        const boothText = boothInput.value.trim() ? boothInput.value : "";
+        const boothText = boothInput.value.trim() ? boothInput.value : "208";
         if (boothText) {
             const fontSize = currentStyle === 'banner' ? "22px" : "34px";
             const fontName = "'NeueHaasGrotesk', 'Inter', sans-serif";
@@ -123,7 +126,7 @@
             const textBaselineY = currentStyle === 'banner' ? 88 : 425; 
 
             ctx.fillStyle = "#162842"; // Dark blue text color
-            ctx.font = `800 ${fontSize} ${fontName}`;
+            ctx.font = `700 ${fontSize} ${fontName}`;
             ctx.textBaseline = "middle";
             ctx.textAlign = "center";
             ctx.fillText(boothText, textCenterX, textBaselineY);

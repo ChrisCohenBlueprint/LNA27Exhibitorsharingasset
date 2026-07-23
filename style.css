@@ -15,6 +15,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'NeueHaasGrotesk';
+    src: url('NeueHaasDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasGrotesk';
+    src: url('NeueHaasDisplay-Bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 :root {
     --primary: #0099da;
     --primary-dark: #005fa9;
