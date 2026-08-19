@@ -184,7 +184,7 @@
     downloadBtn.onclick = (e) => {
         e.stopPropagation();
         const link = document.createElement('a');
-        link.download = currentStyle === 'banner' ? 'lex26-email-banner.png' : 'lex26-exhibitor-badge.png';
+        link.download = currentStyle === 'banner' ? 'lna27-email-banner.png' : 'lna27-exhibitor-badge.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
     };
@@ -193,7 +193,7 @@
         e.stopPropagation();
         downloadBtn.click(); 
         
-        const shareText = `We are so excited to exhibit at #lubricantexpoeurope 2026 - taking place September 15 - 17 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\n5000+ Attendees\n320+ Exhibitors\n100+ Speakers\nAll brought to you over 3 days at Lubricant Expo Europe, Düsseldorf, Germany\n\nSee you there!`;
+        const shareText = `We are so excited to exhibit at #lubricantexponorthamerica 2027 - taking place March 9 - 10 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\nJoin us at the George R. Brown Convention Center - Houston, TX\n\nSee you there!`;
         
         navigator.clipboard.writeText(shareText).then(() => {
             customModal.classList.add('active');
@@ -211,8 +211,8 @@
         e.stopPropagation();
         downloadBtn.click(); 
         
-        const emailBody = `We are so excited to exhibit at #lubricantexpoeurope 2026 - taking place September 15 - 17 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\n5000+ Attendees\n320+ Exhibitors\n100+ Speakers\nAll brought to you over 3 days at Lubricant Expo Europe, Düsseldorf, Germany\n\nSee you there!`;
-        window.location.href = `mailto:?subject=We are exhibiting at Lubricant Expo Europe 2026!&body=${encodeURIComponent(emailBody)}`; 
+        const emailBody = `We are so excited to exhibit at #lubricantexponorthamerica 2027 - taking place March 9 - 10 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\nJoin us at the George R. Brown Convention Center - Houston, TX\n\nSee you there!`;
+        window.location.href = `mailto:?subject=We are exhibiting at Lubricant Expo North America 2027!&body=${encodeURIComponent(emailBody)}`; 
     };
     
     resetBtn.onclick = (e) => { e.stopPropagation(); location.reload(); };
