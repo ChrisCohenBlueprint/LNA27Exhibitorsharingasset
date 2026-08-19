@@ -82,7 +82,7 @@ body {
 .blob-1 {
     width: 50vw;
     height: 50vw;
-    background: var(--primary-dark);
+    background: #ff3b30;
     top: -10%;
     right: -10%;
 }
