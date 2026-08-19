@@ -30,14 +30,14 @@
 }
 
 :root {
-    --primary: #0099da;
-    --primary-dark: #005fa9;
-    --bg-dark: #0a0c10;
+    --primary: #689ABB;
+    --primary-dark: #023149;
+    --bg-dark: #023149;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-main: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
-    --accent-gradient: linear-gradient(135deg, #005fa9 0%, #0099da 100%);
+    --accent-gradient: linear-gradient(135deg, #700907 0%, #C5111A 100%);
     --linkedin-color: #0077b5;
 }
 
@@ -82,7 +82,7 @@ body {
 .blob-1 {
     width: 50vw;
     height: 50vw;
-    background: #a32121;
+    background: #700907;
     top: -10%;
     right: -10%;
 }
@@ -219,12 +219,12 @@ canvas {
 }
 
 .upload-icon {
-    background: #0099da;
+    background: var(--primary);
     padding: 0.85rem;
     border-radius: 50%;
     margin-bottom: 0.5rem;
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 153, 218, 0.4);
+    box-shadow: 0 4px 15px rgba(104, 154, 187, 0.4);
     pointer-events: auto;
 }
 
@@ -311,10 +311,10 @@ canvas {
 }
 
 .style-btn.active {
-    background: rgba(0, 153, 218, 0.15);
+    background: rgba(104, 154, 187, 0.15);
     border-color: var(--primary);
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 153, 218, 0.25);
+    box-shadow: 0 4px 15px rgba(104, 154, 187, 0.25);
 }
 
 .style-icon {
@@ -360,7 +360,7 @@ canvas {
     outline: none;
     border-color: var(--primary);
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 0 3px rgba(0, 153, 218, 0.15);
+    box-shadow: 0 0 0 3px rgba(104, 154, 187, 0.15);
 }
 
 .slider-container {
@@ -449,12 +449,12 @@ input[type="range"]::-webkit-slider-thumb {
 .btn-primary {
     background: var(--accent-gradient);
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 95, 169, 0.3);
+    box-shadow: 0 4px 12px rgba(112, 9, 7, 0.3);
 }
 
 .btn-primary:not(:disabled):hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0, 153, 218, 0.4);
+    box-shadow: 0 6px 20px rgba(197, 17, 26, 0.4);
 }
 
 .share-group {
@@ -544,14 +544,14 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .alert-icon-wrapper {
-    background: rgba(0, 153, 218, 0.15);
+    background: rgba(104, 154, 187, 0.15);
     color: var(--primary);
     padding: 10px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 153, 218, 0.2);
+    border: 1px solid rgba(104, 154, 187, 0.2);
 }
 
 .modal-header h3 {

@@ -125,7 +125,7 @@
             const textCenterX = currentStyle === 'banner' ? 529 : 702;
             const textBaselineY = currentStyle === 'banner' ? 88 : 425; 
 
-            ctx.fillStyle = "#162842"; // Dark blue text color
+            ctx.fillStyle = "#023149"; // Dark blue text color
             ctx.font = `700 ${fontSize} ${fontName}`;
             ctx.textBaseline = "middle";
             ctx.textAlign = "center";
