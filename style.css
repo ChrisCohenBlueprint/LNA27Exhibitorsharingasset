@@ -200,7 +200,7 @@ canvas {
     position: absolute;
     top: 65%; 
     left: 83%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.7);
     width: 200px;
     height: 200px;
     display: flex;
