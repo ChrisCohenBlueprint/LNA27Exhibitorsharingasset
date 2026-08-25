@@ -191,13 +191,17 @@
     
     linkedinBtn.onclick = (e) => { 
         e.stopPropagation();
-        downloadBtn.click(); 
         
-        const shareText = `We are so excited to exhibit at #lubricantexponorthamerica 2027 - taking place March 9 - 10 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\nJoin us at the George R. Brown Convention Center - Houston, TX\n\nSee you there!`;
+        const shareText = `We're exhibiting at Lubricant Expo North America 2027! 🎉\n\nJoin us March 9–10 at the George R. Brown Convention Center, Houston, TX.\n\nRegister for free: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC\n\n#LubricantExpoNorthAmerica #LubricantExpo #WeAreExhibiting`;
         
-        // Always show the modal — clipboard copy is best-effort
-        customModal.classList.add('active');
-        navigator.clipboard.writeText(shareText).catch(err => {
+        // Copy to clipboard first (must be within user gesture)
+        navigator.clipboard.writeText(shareText).then(() => {
+            downloadBtn.click();
+            customModal.classList.add('active');
+        }).catch(err => {
+            // Fallback: still download and show modal even if clipboard fails
+            downloadBtn.click();
+            customModal.classList.add('active');
             console.warn('Clipboard copy failed:', err);
         });
     };
