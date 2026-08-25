@@ -191,37 +191,15 @@
     
     linkedinBtn.onclick = (e) => { 
         e.stopPropagation();
+        downloadBtn.click(); 
         
         const shareText = `We're exhibiting at Lubricant Expo North America 2027! 🎉\n\nJoin us March 9–10 at the George R. Brown Convention Center, Houston, TX.\n\n#LubricantExpoNorthAmerica #LubricantExpo #WeAreExhibiting`;
         
-        // Show the modal first so the user is informed
-        customModal.classList.add('active');
-        
-        // Try clipboard, fallback gracefully
-        if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(shareText).then(() => {
-                downloadBtn.click(); 
-            }).catch(err => {
-                console.warn('Clipboard failed:', err);
-                downloadBtn.click();
-            });
-        } else {
-            // Fallback for Safari/unsecured context
-            let textArea = document.createElement("textarea");
-            textArea.value = shareText;
-            textArea.style.position = "fixed";
-            textArea.style.left = "-999999px";
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-            } catch (err) {
-                console.warn('Fallback copy failed', err);
-            }
-            textArea.remove();
-            downloadBtn.click();
-        }
+        navigator.clipboard.writeText(shareText).then(() => {
+            customModal.classList.add('active');
+        }).catch(err => {
+            window.open('https://www.linkedin.com/feed/?shareActive=true', '_blank'); 
+        });
     };
 
     modalCloseBtn.onclick = () => {
