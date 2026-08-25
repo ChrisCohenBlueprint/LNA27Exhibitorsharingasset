@@ -194,15 +194,36 @@
         
         const shareText = `We're exhibiting at Lubricant Expo North America 2027! 🎉\n\nJoin us March 9–10 at the George R. Brown Convention Center, Houston, TX.\n\n#LubricantExpoNorthAmerica #LubricantExpo #WeAreExhibiting`;
         
-        // Copy to clipboard first (must be within user gesture)
-        navigator.clipboard.writeText(shareText).then(() => {
+        // Robust copy fallback for all browsers
+        const copyToClipboard = (text) => {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(text);
+            } else {
+                return new Promise((resolve, reject) => {
+                    let textArea = document.createElement("textarea");
+                    textArea.value = text;
+                    textArea.style.position = "fixed";
+                    textArea.style.left = "-999999px";
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    try {
+                        document.execCommand('copy') ? resolve() : reject();
+                    } catch (err) {
+                        reject(err);
+                    }
+                    textArea.remove();
+                });
+            }
+        };
+
+        copyToClipboard(shareText).then(() => {
             downloadBtn.click();
             customModal.classList.add('active');
         }).catch(err => {
-            // Fallback: still download and show modal even if clipboard fails
+            console.warn('Clipboard copy failed:', err);
             downloadBtn.click();
             customModal.classList.add('active');
-            console.warn('Clipboard copy failed:', err);
         });
     };
 
