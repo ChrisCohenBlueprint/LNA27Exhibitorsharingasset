@@ -122,7 +122,7 @@
             const fontSize = currentStyle === 'banner' ? "22px" : "34px";
             const fontName = "'NeueHaasGrotesk', 'Inter', sans-serif";
             
-            const textCenterX = currentStyle === 'banner' ? 529 : 885;
+            const textCenterX = currentStyle === 'banner' ? 529 : 878;
             const textBaselineY = currentStyle === 'banner' ? 88 : 175;
 
             ctx.fillStyle = "#023149"; // Dark blue text color
