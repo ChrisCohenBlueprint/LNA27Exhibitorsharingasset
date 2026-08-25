@@ -32,7 +32,7 @@
 :root {
     --primary: #689ABB;
     --primary-dark: #023149;
-    --bg-dark: #023149;
+    --bg-dark: #1a0505;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-main: #ffffff;
@@ -70,7 +70,7 @@ body {
     height: 100%;
     z-index: 0;
     filter: blur(80px);
-    opacity: 0.35;
+    opacity: 0.5;
     pointer-events: none;
 }
 
