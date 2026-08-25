@@ -195,10 +195,10 @@
         
         const shareText = `We are so excited to exhibit at #lubricantexponorthamerica 2027 - taking place March 9 - 10 \n\nRegister for free here: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC \n\nJoin us at the George R. Brown Convention Center - Houston, TX\n\nSee you there!`;
         
-        navigator.clipboard.writeText(shareText).then(() => {
-            customModal.classList.add('active');
-        }).catch(err => {
-            window.open('https://www.linkedin.com/feed/?shareActive=true', '_blank'); 
+        // Always show the modal — clipboard copy is best-effort
+        customModal.classList.add('active');
+        navigator.clipboard.writeText(shareText).catch(err => {
+            console.warn('Clipboard copy failed:', err);
         });
     };
 
