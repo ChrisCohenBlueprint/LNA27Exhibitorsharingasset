@@ -56,7 +56,7 @@
                 dropZone.style.aspectRatio = "800 / 200";
                 placeholder.style.top = "53.5%";
                 placeholder.style.left = "84.5%";
-                placeholder.style.transform = "translate(-50%, -50%) scale(0.65)";
+                placeholder.style.transform = "translate(-50%, -50%) scale(0.45)";
             } else {
                 canvas.width = 1024;
                 canvas.height = 535;
@@ -64,7 +64,7 @@
                 dropZone.style.aspectRatio = "1024 / 535";
                 placeholder.style.top = "65%";
                 placeholder.style.left = "83%";
-                placeholder.style.transform = "translate(-50%, -50%) scale(1)";
+                placeholder.style.transform = "translate(-50%, -50%) scale(0.7)";
             }
             
             frameImage = new Image();
