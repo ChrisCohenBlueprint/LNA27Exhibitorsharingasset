@@ -192,7 +192,7 @@
     linkedinBtn.onclick = (e) => { 
         e.stopPropagation();
         
-        const shareText = `We're exhibiting at Lubricant Expo North America 2027! 🎉\n\nJoin us March 9–10 at the George R. Brown Convention Center, Houston, TX.\n\nRegister for free: https://register.visitcloud.com/survey/3dkj7ikw2zeed?actioncode=000096DOC\n\n#LubricantExpoNorthAmerica #LubricantExpo #WeAreExhibiting`;
+        const shareText = `We're exhibiting at Lubricant Expo North America 2027! 🎉\n\nJoin us March 9–10 at the George R. Brown Convention Center, Houston, TX.\n\n#LubricantExpoNorthAmerica #LubricantExpo #WeAreExhibiting`;
         
         // Copy to clipboard first (must be within user gesture)
         navigator.clipboard.writeText(shareText).then(() => {
