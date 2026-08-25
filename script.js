@@ -62,7 +62,7 @@
                 canvas.height = 535;
                 FRAME_PATH_CURRENT = 'frame.png';
                 dropZone.style.aspectRatio = "1024 / 535";
-                placeholder.style.top = "32%";
+                placeholder.style.top = "65%";
                 placeholder.style.left = "83%";
                 placeholder.style.transform = "translate(-50%, -50%) scale(1)";
             }
@@ -101,7 +101,7 @@
             
             // Default center around the white area on the right
             const imgCenterX = (currentStyle === 'banner' ? 675 : 850) + userImgX;
-            const imgCenterY = (currentStyle === 'banner' ? 107 : 171) + userImgY;
+            const imgCenterY = (currentStyle === 'banner' ? 107 : 348) + userImgY;
             
             // White background layer directly behind the uploaded image
             ctx.fillStyle = "#ffffff";
